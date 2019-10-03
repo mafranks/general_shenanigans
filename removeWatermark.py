@@ -56,11 +56,11 @@ def cleanpdf(source, destination, patterns):
 
 
 if len(sys.argv) < 4:
-    line1 = f"usage: {sys.argv[0]} inputfile outputfile pattern1 ... patternN"
-    line2 = "If you want to update the pdf instead of creating a new one, you can provide the same value for inputfile and outputfile"
-    line3 = f"Example: {sys.argv[0]} test.pdf test-clean.pdf 'stupid watermark' 'copyright of' 'crap company' 'For personal use only' '192.168.1.1'"
-    sys.exit(line1 + '\n\n' + line2 + '\n\n' + line3)
-
+    line1 = f"Usage:\n\t{sys.argv[0]} inputfile outputfile pattern1 ... patternN"
+    line2 = "To update the PDF instead of creating a new one, provide the same value for inputfile and outputfile."
+    line3 = f"Example:\n\t{sys.argv[0]} test.pdf test-clean.pdf 'stupid watermark' 'copyright of' 'crap company' '192.168.1.1'"
+    sys.exit(f"\n\n{line1}\n\n{line2}\n\n{line3}\n\n")
+    
 source = sys.argv[1]
 destination = sys.argv[2]
 patterns = sys.argv[3:]
